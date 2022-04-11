@@ -1,9 +1,13 @@
+const clickHandler = () => {
+
+}
+
 const Form = () => {
     return (
         <div>
             <input type="text" placeholder="Write a new todo" />
             <br />
-            <button>Add todo</button>
+            <button onClick={clickHandler}>Add todo</button>
         </div>
     )
 }
