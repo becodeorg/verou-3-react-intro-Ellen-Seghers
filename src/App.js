@@ -1,24 +1,32 @@
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
+const App = () => {
+    const todos = ["My first todo", "My second todo"];
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React @ BeCode
-        </a>
-      </header>
-    </div>
+      <ul>
+        {todos.map((todo) => (
+            <li>
+              <input type="checkbox" /> {todo}
+            </li>
+        ))}
+      </ul>
+    // <div className="App">
+    //   <header className="App-header">
+    //     <img src={logo} className="App-logo" alt="logo" />
+    //     <p>
+    //       Edit <code>src/App.js</code> and save to reload.
+    //     </p>
+    //     <a
+    //       className="App-link"
+    //       href="https://reactjs.org"
+    //       target="_blank"
+    //       rel="noopener noreferrer"
+    //     >
+    //       Learn React @ BeCode
+    //     </a>
+    //   </header>
+    // </div>
   );
 }
 
