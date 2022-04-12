@@ -1,5 +1,8 @@
+import React, { useState } from  'react';
+
 const Todolist = () => {
-    const Todos = ["Make dinner", "Take a shower", "Cleaning"];
+    const [Todos, setTodos] = useState(["Make dinner", "Take a shower", "Cleaning"]);
+
     return (
         <ul>
             {Todos.map((todo) => (
