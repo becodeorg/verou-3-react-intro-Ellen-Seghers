@@ -17,7 +17,16 @@ const App = () => {
     }
 
     const toggleCheckbox = (id) => {
-
+        const todoToggle = todos;
+        const todoToToggle = todoToggle.find(todo => todo.id == id);
+        console.log(todoToToggle);
+        if(todoToToggle.complete == true) {
+            todoToToggle.complete = false;
+        }
+        else {
+            todoToToggle.complete = true;
+        }
+        setTodos([...todoToggle]);
     }
 
     useEffect(() => {
@@ -37,7 +46,7 @@ const App = () => {
     return (
       <div>
           <div>
-              <Todos todos={todos} />
+              <Todos todos={todos} togglefunction={toggleCheckbox}/>
               <input ref={inputRef} type="text" placeholder="Write a new todo" />
               <br />
               <button onClick={clickHandler}>Add todo</button>
