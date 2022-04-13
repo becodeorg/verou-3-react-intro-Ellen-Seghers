@@ -11,9 +11,13 @@ const App = () => {
         console.log(inputRef.current.value);
         if (name === '') return
             setTodos(prevTodos => {
-                return [...prevTodos, { id: 1, name: name, complete: false}]
+                return [...prevTodos, { id: prevTodos.length>0 ? prevTodos[prevTodos.length-1].id+1 : 0, name: name, complete: false}]
             })
         inputRef.current.value = null
+    }
+
+    const toggleCheckbox = (id) => {
+
     }
 
     useEffect(() => {
