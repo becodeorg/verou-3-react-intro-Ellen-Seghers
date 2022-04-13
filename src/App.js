@@ -23,8 +23,12 @@ const App = () => {
             setTodos(storedTodo);
         }
         console.log(todos)
-
     },[]);
+
+    useEffect(() => {
+        localStorage.setItem('myTodo', JSON.stringify(todos))
+    }, [todos])
+
 
     return (
       <div>
