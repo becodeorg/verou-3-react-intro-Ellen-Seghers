@@ -1,17 +1,16 @@
 import React, { useState } from  'react';
+import Todo from './Todo';
 
-const Todolist = () => {
-    const [Todos, setTodos] = useState(["Make dinner", "Take a shower", "Cleaning"]);
-
+const Todos = ({todos}) => {
     return (
         <ul>
-            {Todos.map((todo) => (
-                <li>
-                    <input type="checkbox" /> {todo}
-                </li>
-            ))}
+            {todos.map((todo, index) => {
+                return (
+                    <Todo key={index} todo={todo}/>
+                )
+            })}
         </ul>
     )
 }
 
-export default Todolist;
+export default Todos;
