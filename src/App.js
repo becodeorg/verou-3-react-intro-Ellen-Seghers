@@ -29,6 +29,11 @@ const App = () => {
         setTodos([...todoToggle]);
     }
 
+    const clearCompleted = () => {
+        const uncompletedTodos = todos.filter(todo => todo.complete == false);
+        setTodos([...uncompletedTodos]);
+    }
+
     useEffect(() => {
         let storedTodo = JSON.parse(localStorage.getItem('myTodo'));
         console.log(storedTodo);
@@ -50,7 +55,7 @@ const App = () => {
               <input ref={inputRef} type="text" placeholder="Write a new todo" />
               <br />
               <button onClick={clickHandler}>Add todo</button>
-              <button>Clear</button>
+              <button onClick={clearCompleted}>Clear</button>
           </div>
       </div>
   );
