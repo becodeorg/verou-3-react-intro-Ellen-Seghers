@@ -1,6 +1,7 @@
 import React, {useRef, useEffect, useState} from "react";
 import Todos from './Todos';
 import './application.css';
+import Form from './Form';
 
 const App = () => {
     const [todos, setTodos] = useState([]);
@@ -53,12 +54,7 @@ const App = () => {
           <div className="text-center">
               <Todos todos={todos} togglefunction={toggleCheckbox}/>
               <br/>
-              <input ref={inputRef} type="text" placeholder="Write a new todo"
-                     className="rounded border-2 border-cyan-400 outline-cyan-600"/>
-              <br/>
-              <br/>
-              <button onClick={clickHandler} className="bg-cyan-400 p-1.5 mr-4 rounded">Add todo</button>
-              <button onClick={clearCompleted} className="bg-cyan-600 p-1.5 rounded">Clear todo's</button>
+              <Form inputReference={inputRef} clickHandlerFunction={clickHandler} clearCompletedFunction={clearCompleted}/>
           </div>
       </div>
   );
