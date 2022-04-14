@@ -1,6 +1,6 @@
-import './App.css';
 import React, {useRef, useEffect, useState} from "react";
 import Todos from './Todos';
+import './application.css';
 
 const App = () => {
     const [todos, setTodos] = useState([]);
@@ -50,12 +50,14 @@ const App = () => {
 
     return (
       <div>
-          <div>
+          <div class="text-center">
               <Todos todos={todos} togglefunction={toggleCheckbox}/>
-              <input ref={inputRef} type="text" placeholder="Write a new todo" />
               <br />
-              <button onClick={clickHandler}>Add todo</button>
-              <button onClick={clearCompleted}>Clear</button>
+              <input ref={inputRef} type="text" placeholder="Write a new todo" className="rounded border-2 border-solid border-black" />
+              <br />
+              <br />
+              <button onClick={clickHandler} className="bg-gray-300 p-1.5 mr-4 rounded">Add todo</button>
+              <button onClick={clearCompleted} className="bg-gray-300 p-1.5 rounded">Clear</button>
           </div>
       </div>
   );
