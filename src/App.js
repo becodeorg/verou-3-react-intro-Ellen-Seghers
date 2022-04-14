@@ -50,14 +50,15 @@ const App = () => {
 
     return (
       <div>
-          <div class="text-center">
+          <div className="text-center">
               <Todos todos={todos} togglefunction={toggleCheckbox}/>
-              <br />
-              <input ref={inputRef} type="text" placeholder="Write a new todo" className="rounded border-2 border-solid border-black" />
-              <br />
-              <br />
-              <button onClick={clickHandler} className="bg-gray-300 p-1.5 mr-4 rounded">Add todo</button>
-              <button onClick={clearCompleted} className="bg-gray-300 p-1.5 rounded">Clear</button>
+              <br/>
+              <input ref={inputRef} type="text" placeholder="Write a new todo"
+                     className="rounded border-2 border-cyan-400 outline-cyan-600"/>
+              <br/>
+              <br/>
+              <button onClick={clickHandler} className="bg-cyan-400 p-1.5 mr-4 rounded">Add todo</button>
+              <button onClick={clearCompleted} className="bg-cyan-600 p-1.5 rounded">Clear todo's</button>
           </div>
       </div>
   );
