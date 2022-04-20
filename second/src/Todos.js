@@ -5,6 +5,7 @@ const Todos = () => {
         <ul>
             <li>
                 1st todo
+                <input type="checkbox"/>
             </li>
         </ul>
     )
