@@ -1,12 +1,13 @@
+import React from "react";
 import './App.css';
 import Form from './Form';
-import Todos from "./Todos";
+import Todolist from "./Todolist";
 
 function App() {
     return (
         <div>
             <Form />
-            <Todos />
+            <Todolist />
         </div>
     )
 }
