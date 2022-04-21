@@ -1,12 +1,21 @@
-import React from "react";
+import React, { useRef } from "react";
 
 const Form = () => {
+    const inputRef = useRef();
+
+    const clickHandler = () => {
+        const inputElement = inputRef.current;
+
+        // Do something with inputElement...
+        console.log(inputElement.value);
+    }
+
     return (
         <div>
-            <input type="text" id="fname"/>
-            <button>Add Todo</button>
+            <input ref={inputRef} type="text" placeholder="Write a new todo" id="todo"/>
+            <button onClick={clickHandler}>Add Todo</button>
         </div>
     )
-}
+};
 
 export default Form;
