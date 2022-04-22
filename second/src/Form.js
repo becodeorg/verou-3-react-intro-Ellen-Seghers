@@ -5,8 +5,8 @@ const Form = ({todoProp, update}) => {
 
     const clickHandler = () => {
         const inputElement = inputRef.current;
-        const oldTodos = todoProp;
-        const newTodos = [...oldTodos, {"isFinished": false, "content": inputElement.value, "id": 1}];
+        const oldTodos = JSON.parse(JSON.stringify(todoProp));
+        const newTodos = [...oldTodos, {"isFinished": false, "content": inputElement.value, "id": Date.now()}];
         update(newTodos);
 
         // Do something with inputElement...
