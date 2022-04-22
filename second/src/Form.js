@@ -1,10 +1,13 @@
 import React, { useRef } from "react";
 
-const Form = () => {
+const Form = ({todoProp, update}) => {
     const inputRef = useRef();
 
     const clickHandler = () => {
         const inputElement = inputRef.current;
+        const oldTodos = todoProp;
+        const newTodos = [...oldTodos, {"isFinished": false, "content": inputElement.value, "id": 1}];
+        update(newTodos);
 
         // Do something with inputElement...
         console.log(inputElement.value);
