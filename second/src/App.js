@@ -4,7 +4,7 @@ import Form from './Form';
 import Todolist from "./Todolist";
 
 function App() {
-    const initialTodos = [{"isFinished": false, "content": "My first todo", "id": 1}, {"isFinished": false, "content": "My second todo", "id": 2}];
+    const initialTodos = [];
     const [todos, updateTodos] = useState(initialTodos);
 
     return (
